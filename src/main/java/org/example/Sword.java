@@ -1,18 +1,16 @@
 package org.example;
-enum Rarity{
-    COMMON(0),
-    UNCOMMON(1),
-    RARE(2),
-    EPIC(3),
-    LEGENDARY(4);
-    private final int attackModifier;
-    private Rarity(int attackScore){
-        this.attackModifier =attackScore;
+
+public class Sword implements Items{
+    private int attackDamage=2;
+    private Rarity rarity = Rarity.COMMON;
+    public Sword(){
+    }
+    public Sword(Rarity rarity){
+        this.attackDamage = attackDamage+rarity.getItemModifier();
     }
 
-}
-public class Sword implements Items{
-    private int attackDamage;
-    private Rarity NULL;
-
+    @Override
+    public int getValue() {
+        return this.attackDamage;
+    }
 }
