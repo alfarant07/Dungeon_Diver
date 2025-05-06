@@ -16,6 +16,8 @@ public class Character {
 =======
     private int armorScore;
     private ArrayList<Items> inventory = new ArrayList<>();
+    private int leftHandItem=0;
+    private int rightHandItem=0;
     Role role;
     public Character(Role role){
         this.role=role;
@@ -24,6 +26,13 @@ public class Character {
         this.strengthScore= role.getStrengthScore();
 >>>>>>> 532fc85 (Implemented inventory and armor score field.)
     }
+    public Character(Role role,Items leftHand){
+        if(leftHand instanceof Shield) healthPoints+=leftHand.getValue();
+        if(leftHand instanceof Sword) strengthScore += leftHand.getValue();
+        if(leftHand instanceof MagicWand) craftScore += leftHand.getValue();
+    }
+
+
 
 
     public int getCraftScore() {
