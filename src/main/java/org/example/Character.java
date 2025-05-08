@@ -12,4 +12,15 @@ public class Character {
         this.strengthScore= role.getStrengthScore();
     }
 
+    public int getCraftScore() {
+        return craftScore;
+    }
+
+    public int getStrengthScore() {
+        return strengthScore;
+    }
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
+    }
 }
