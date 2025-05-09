@@ -19,7 +19,7 @@ public class Fight extends Action {
             } else {
                 this.player.setHealthPoints(damageTaken);
             }
-            if (monster.getHealthPoints() < 0) d.getCurrentChamber().removeMonster(destination);
+            if (monster.getHealthPoints() <= 0) d.getCurrentChamber().removeMonster(destination);
         }
 
 }
