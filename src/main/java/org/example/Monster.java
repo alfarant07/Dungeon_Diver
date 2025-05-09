@@ -6,6 +6,7 @@ public abstract class Monster {
         public abstract int getHealthPoints();
         public abstract int deductHealthPoints(Character player);
         public abstract void setHealthPoints(int damageTaken);
+        public abstract String getName();
 
 
 }
