@@ -6,7 +6,9 @@ public class Door {
         destination.addEdge(source);
     }
     public static void connect(Chamber source, Chamber destination, Monster monster){
-
+        source.addEdge(destination);
+        destination.addEdge(source);
+        source.addMonster(monster,destination);
     }
 
 }
