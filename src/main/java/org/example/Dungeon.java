@@ -12,6 +12,7 @@ public class Dungeon {
 
     public Dungeon(Chamber entrance, Chamber exit, Character player){
         this.chamberEntrance=entrance;
+        this.currentChamber = chamberEntrance;
         this.chamberExit=exit;
         this.player=player;
     }
