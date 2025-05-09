@@ -7,6 +7,7 @@ public class Spider extends Monster{
     private int strengthScore;
     private int craftScore=0;
     private int healthPoints;
+    private String name = "Spider";
     public Spider(){
         this.strengthScore =r.nextInt(10);
         this.healthPoints =  r.nextInt(20);
@@ -26,6 +27,12 @@ public class Spider extends Monster{
     public int getHealthPoints() {
         return healthPoints;
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
     public int deductHealthPoints(Character player) {
         int characterAttack = (r.nextInt(6)+1) + player.getCraftScore();
         int monsterAttack = (r.nextInt(6)+1) + this.getCraftScore();
