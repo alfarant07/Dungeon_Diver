@@ -21,6 +21,14 @@ public class Character {
         return strengthScore;
     }
 
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
     public void setHealthPoints(int healthPoints) {
         this.healthPoints = healthPoints;
     }
