@@ -4,13 +4,14 @@ public class Character {
     private int strengthScore;
     private int craftScore;
     private int healthPoints;
-    Role role;
-    public Character(Role role){
-        this.role=role;
-        this.craftScore=role.getCraftScore();
-        this.healthPoints=role.getHealthPoints();
-        this.strengthScore= role.getStrengthScore();
+    private String playerName;
+    public Character(int craftScore, int strengthScore, int healthPoints,String playerName){
+        this.craftScore=0;
+        this.healthPoints=0;
+        this.strengthScore=0;
+        this.playerName =playerName;
     }
+
 
     public int getCraftScore() {
         return craftScore;
