@@ -5,6 +5,7 @@ package org.example;
 public class MagicWand implements Items{
     private int craftScore = 2;
     private Rarity rarity = Rarity.COMMON;
+    private String name = rarity.name() + "Magic_Wand";
     public MagicWand(){
 
     }
@@ -12,9 +13,12 @@ public class MagicWand implements Items{
         this.craftScore += rarity.getItemModifier();
     }
 
-    @Override
-    public int applyModifier() {
-        return craftScore;
+    public void applyModifier(Character player) {
+        player.addCraftScore(this.craftScore);
+    }
+
+    public String getName() {
+        return name;
     }
 }
 
