@@ -1,7 +1,11 @@
 package org.example;
 
-public interface Monster {
-    public int getCraftScore();
-    public int getStrengthScore();
-    public int getHealthPoints();
+public abstract class Monster {
+        public abstract int getCraftScore();
+        public abstract int getStrengthScore();
+        public abstract int getHealthPoints();
+        public abstract int deductHealthPoints(Character player);
+        public abstract void setHealthPoints(int damageTaken);
+
+
 }
