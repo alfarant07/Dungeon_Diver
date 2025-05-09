@@ -9,8 +9,7 @@ public class Sword implements Items{
         this.attackDamage = attackDamage+rarity.getItemModifier();
     }
 
-    @Override
-    public int applyModifier() {
+    public int applyModifier(Character player) {
         return this.attackDamage;
     }
 }
