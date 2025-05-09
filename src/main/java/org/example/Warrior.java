@@ -1,21 +1,21 @@
 package org.example;
 
-public class Warrior implements Role{
-    public int strengthScore = 16;
-    public int craftScore = 6;
-    public int healthPoints = 15;
+public class Warrior extends Character{
+    public static int strengthScore = 16;
+    public static int craftScore = 6;
+    public static int healthPoints = 15;
+    public  Warrior(String playerName){
+        super(craftScore,strengthScore,healthPoints,playerName);
+    }
 
-    @Override
     public int getCraftScore() {
         return craftScore;
     }
 
-    @Override
     public int getStrengthScore() {
         return strengthScore;
     }
 
-    @Override
     public int getHealthPoints() {
         return healthPoints;
     }
