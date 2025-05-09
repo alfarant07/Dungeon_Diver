@@ -7,6 +7,8 @@ public class Character {
     private int craftScore;
     private int healthPoints;
     private String playerName;
+    private ArrayList<Items> inventory = new ArrayList<>();
+
     public Character(int craftScore, int strengthScore, int healthPoints,String playerName) {
         this.craftScore = 0;
         this.healthPoints = 0;
@@ -42,5 +44,8 @@ public class Character {
     }
     public void addHealthpoints(int modifier){
         this.healthPoints+=modifier;
+    }
+    public void addItem(Items items){
+        inventory.add(items);
     }
 }
