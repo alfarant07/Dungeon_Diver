@@ -20,11 +20,15 @@ public class Dungeon {
         return currentChamber;
     }
     public boolean isFinished(){
-        if(currentChamber == chamberExit) return true;
+        if(currentChamber == chamberExit || player.getHealthPoints()<0) return true;
         return false;
     }
-    public ArrayList<Action> getActions(){
-
-
+    public void setCurrentChamber(Chamber destination){
+        this.currentChamber = destination;
     }
+    public ArrayList<Action> getActions(){
+        
+    }
+
+
 }
