@@ -18,7 +18,7 @@ public class TextUI {
         s.append("You are in a chamber with "+r.getDoors().size()+" doors\n");
         s.append("There are "+ r.getItems().size()+ "items in the chamber\n");
 
-        System.out.prinln(s.toString());
+        System.out.println(s.toString());
     }
     private Action ask(Dungeon d){
         StringBuilder s = new StringBuilder();
