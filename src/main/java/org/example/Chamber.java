@@ -21,7 +21,7 @@ public class Chamber {
         this.adj.add(neighbor);
     }
     public void addMonster(Monster monster,Chamber destination){
-        this.blockedDoors.put(Monster,destination);
+        this.blockedDoors.put(monster,destination);
     }
     public ArrayList<Chamber> getDoors(){
         return adj;
