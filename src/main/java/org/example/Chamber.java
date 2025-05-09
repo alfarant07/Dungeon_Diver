@@ -17,7 +17,9 @@ public class Chamber {
     }
     public void addEdge(Chamber neighbor){
         this.adj.add(neighbor);
-
+    }
+    public ArrayList<Chamber> getDoors(){
+        return adj;
     }
 
 }
