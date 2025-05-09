@@ -13,7 +13,7 @@ public class MagicWand implements Items{
     }
 
     @Override
-    public int getValue() {
+    public int applyModifier() {
         return craftScore;
     }
 }

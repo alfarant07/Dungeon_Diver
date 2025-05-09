@@ -10,7 +10,7 @@ public class Sword implements Items{
     }
 
     @Override
-    public int getValue() {
+    public int applyModifier() {
         return this.attackDamage;
     }
 }

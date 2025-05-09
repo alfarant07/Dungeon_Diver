@@ -11,7 +11,7 @@ public class Shield implements Items {
     }
 
     @Override
-    public int getValue() {
+    public int applyModifier(Character player) {
         return armorModifier;
     }
 }
