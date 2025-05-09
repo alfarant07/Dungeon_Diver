@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Random;
 
-public class Spider implements Monster{
+public class Spider extends Monster{
     Random r = new Random();
     private int strengthScore;
     private int craftScore=0;
@@ -25,5 +25,13 @@ public class Spider implements Monster{
     @Override
     public int getHealthPoints() {
         return healthPoints;
+    }
+    public int deductHealthPoints(Character player) {
+        int characterAttack = (r.nextInt(6)+1) + player.getCraftScore();
+        int monsterAttack = (r.nextInt(6)+1) + this.getCraftScore();
+        return characterAttack-monsterAttack;
+    }
+    public void setHealthPoints(int adjustedHP){
+        this.healthPoints-=adjustedHP;
     }
 }
