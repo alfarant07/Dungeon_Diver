@@ -27,8 +27,18 @@ public class Dungeon {
         this.currentChamber = destination;
     }
     public ArrayList<Action> getActions(){
-        
+        for(Items items:currentChamber.getItems() ){
+            Action item = new Pick(player,items);
+            actionsAvailable.add(item);
+        }
+        for(Chamber chamber:currentChamber.getDoors() ){
+            Action doors = new Move(this,chamber);
+            actionsAvailable.add(doors);
+        }
+        //https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html#forEach-java.util.function.BiConsumer-
+        currentChamber.getBlockedDoors().forEach((monster, chamber) -> {
+            actionsAvailable.add(new Fight(monster, player, chamber));
+        });
+        return actionsAvailable;
     }
-
-
 }
