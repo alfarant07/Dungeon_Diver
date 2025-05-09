@@ -3,19 +3,18 @@ package org.example;
 public class Fight extends Action {
     private Character player;
     private Monster monster;
-    public Fight(Monster monster){
+    public Fight(Monster monster, Character player){
         super("Fight Monster:" + monster.getName());
-    }
-    public void fight(){
-        int damageTaken = monster.deductHealthPoints(player);
-        if(damageTaken>0){
-            monster.setHealthPoints(damageTaken);
-        }else{
-            player.setHealthPoints(damageTaken);
-        }
-
+        this.player = player;
+        this.monster=monster;
     }
     public void execute(){
-        fight();
+        int damageTaken = this.monster.deductHealthPoints(this.player);
+        if(damageTaken>0){
+            this.monster.setHealthPoints(damageTaken);
+        }else{
+            this.player.setHealthPoints(damageTaken);
+        }
+
     }
 }
