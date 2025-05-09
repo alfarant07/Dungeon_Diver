@@ -6,6 +6,7 @@ public class DarkMage extends Monster{
     private int strengthScore =0;
     private int craftScore;
     private int healthPoints;
+    private String name = DarkMage;
     Random r = new Random();
     public DarkMage(){
         this.craftScore= r.nextInt(20);
@@ -35,5 +36,9 @@ public class DarkMage extends Monster{
     }
     public void setHealthPoints(int adjustedHP){
         this.healthPoints-=adjustedHP;
+    }
+
+    public String getName() {
+        return name;
     }
 }
