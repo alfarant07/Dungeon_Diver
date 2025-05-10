@@ -8,14 +8,15 @@ public class Fight extends Action {
     private Chamber destination;
     private Dungeon d;
 
-    public Fight(Monster monster, Character player, Chamber destination,Dungeon dungeon) {
+    public Fight(Monster monster, Character player, Chamber destination, Dungeon dungeon) {
         super("Fight Monster:" + monster.getName());
         this.player = player;
         this.monster = monster;
         this.destination = destination;
-        d=dungeon;
+        d = dungeon;
     }
-        public void execute () {
+
+    public void execute() {
             int damageTaken = this.monster.deductHealthPoints(this.player);
             if (damageTaken > 0) {
                 this.monster.setHealthPoints(damageTaken);
@@ -30,4 +31,5 @@ public class Fight extends Action {
             }
         }
 
-}
+    }
+
