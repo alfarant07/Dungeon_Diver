@@ -37,8 +37,10 @@ public class Dungeon {
             actionsAvailable.add(doors);
         }
         //https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html#forEach-java.util.function.BiConsumer-
-        currentChamber.getBlockedDoors().forEach((monster, chamber) -> {
-            actionsAvailable.add(new Fight(monster, player, chamber));
+        currentChamber.getBlockedDoors().forEach((chamber, monster) -> {
+            if(monster.getHealthPoints()>0) {
+                actionsAvailable.add(new Fight(monster, player, chamber, this));
+            }
         });
         return actionsAvailable;
     }
