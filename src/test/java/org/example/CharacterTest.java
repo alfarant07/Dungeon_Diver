@@ -21,5 +21,7 @@ class CharacterTest {
         assertEquals(character.getStrengthScore(),16);
         assertEquals(character.getHealthPoints(),15);
         assertEquals(character.getPlayerName(),"Balerion");
+        character.addItem(new Sword(Rarity.LEGENDARY));
+        assertEquals(22,character.getStrengthScore());
     }
 }
