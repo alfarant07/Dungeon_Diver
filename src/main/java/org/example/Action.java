@@ -6,5 +6,8 @@ public abstract class Action {
         this.prompt = prompt;
     }
     public abstract void execute();
+    public String toString(){
+        return prompt;
+    }
 
 }
