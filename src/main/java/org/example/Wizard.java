@@ -9,15 +9,15 @@ public class Wizard extends Character{
     }
 
 
-    public int getStrengthScore() {
-        return strengthScore;
-    }
-
-    public int getHealthPoints() {
-        return healthPoints;
-    }
-
-    public int getCraftScore() {
-        return craftScore;
-    }
+//    public int getStrengthScore() {
+//        return this.strengthScore;
+//    }
+//
+//    public int getHealthPoints() {
+//        return this.healthPoints;
+//    }
+//
+//    public int getCraftScore() {
+//        return this.craftScore;
+//    }
 }

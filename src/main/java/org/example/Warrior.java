@@ -8,17 +8,17 @@ public class Warrior extends Character{
         super(craftScore,strengthScore,healthPoints,playerName);
     }
 
-    public int getCraftScore() {
-        return craftScore;
-    }
-
-    public int getStrengthScore() {
-        return strengthScore;
-    }
-
-    public int getHealthPoints() {
-        return healthPoints;
-    }
+//    public int getCraftScore() {
+//        return this.craftScore;
+//    }
+//
+//    public int getStrengthScore() {
+//        return this.strengthScore;
+//    }
+//
+//    public int getHealthPoints() {
+//        return this.healthPoints;
+//    }
 
 
 }
