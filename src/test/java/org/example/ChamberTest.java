@@ -39,9 +39,8 @@ class ChamberTest {
         Door.connect(chambers[0],chambers[2]);
         Door.connect(chambers[0],chambers[3]);
         Door.connect(chambers[0],chambers[4]);
+        Door.connect(chambers[0],chambers[0]);
         assertEquals(4,chambers[0].getDoors().size());
-
-
 
     }
 }
