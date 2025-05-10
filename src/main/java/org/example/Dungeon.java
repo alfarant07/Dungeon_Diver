@@ -1,7 +1,22 @@
 package org.example;
 
 import java.util.*;
+//------------------------------------------------------
+// Assignment_2 (2)
+// Written by: (Anthony Alfaro 2148110)
+// For SES350 Section (602) – Spring 2025
+    /*
+        A dungeon class which is pretty much our graph unlike the chambers which our individual
+        vertices the dungeon implements a chamberEntrance to dedicate our spawn point and chamberExit
+        need this to compute wether the game is finished once we reach the exist or if the player
+        dies.DUngeon builds the available actions in our current chamber.
 
+        P.S implemented a dfs to make sure our dungeon is valid sadly cannot implement it
+        without changing game file but meant to be a sort of error checker and prevent
+        an impossible dungeon used for testing though.
+
+     */
+//--------------------------------------------------------
 public class Dungeon {
     private int doors;
     private Chamber chamberEntrance;
@@ -10,6 +25,12 @@ public class Dungeon {
     private Character player;
     private ArrayList<Action> actionsAvailable = new ArrayList<>();
 
+    /**
+     *
+     * @param entrance
+     * @param exit
+     * @param player
+     */
     public Dungeon(Chamber entrance, Chamber exit, Character player) {
         this.chamberEntrance = entrance;
         this.currentChamber = chamberEntrance;
@@ -17,19 +38,39 @@ public class Dungeon {
         this.player = player;
     }
 
+    /**
+     *
+     * @return currentChamber
+     */
     public Chamber getCurrentChamber() {
         return currentChamber;
     }
 
+    /**
+     * if the currentCHamber is exit or character dies game is finished
+     * @return status of the game
+     */
     public boolean isFinished() {
         if (currentChamber == chamberExit || player.getHealthPoints() < 0) return true;
         return false;
     }
 
+    /**
+     * updates currentChamber when character moves
+     * @param destination chamber
+     */
     public void setCurrentChamber(Chamber destination) {
         this.currentChamber = destination;
     }
 
+    /**
+     * the following method utilizes for each loops
+     * to create Action objects based on how many actions are available in the chamber
+     * that is determined by the length of the list of items
+     * the doors in the chambers
+     * and the amount of monsters blocking the door
+     * @returns a list of available actions
+     */
     public ArrayList<Action> getActions() {
         actionsAvailable.clear();
         for (Items items : currentChamber.getItems()) {
@@ -49,6 +90,14 @@ public class Dungeon {
         return actionsAvailable;
     }
 
+    /**
+     * A dfs algorithm to ensure that the dungeon is valid made for testing with hopes of implementing
+     * in game logic by implementing in game after the dungeon has been made but dont want to alter
+     * game file
+     * @param chamberEntrance root of our dfs
+     * @param chamberExit looking to see if chamber exit is in our visited list
+     * @return wether an exit exist or not
+     */
     public boolean validDungeon(Chamber chamberEntrance, Chamber chamberExit) {
         Set<Chamber> visited = new HashSet<>();
         Stack<Chamber> stack = new Stack<>();

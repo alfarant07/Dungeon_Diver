@@ -1,5 +1,13 @@
 package org.example;
+//------------------------------------------------------
+// Assignment_2 (2)
+// Written by: (Anthony Alfaro 2148110)
+// For SES350 Section (602) – Spring 2025
+    /*
+        given game file
 
+     */
+//--------------------------------------------------------
 public class Game {
     public static void main(String[]args){
         Chamber[] chambers = new Chamber[]{
@@ -15,7 +23,7 @@ public class Game {
         Door.connect(chambers[2],chambers[3]);
         Door.connect(chambers[3],chambers[4]);
         Character player = new Wizard("Gandalf");
-        Dungeon d = new Dungeon(chambers[0],chambers[2],player);
+        Dungeon d = new Dungeon(chambers[0],chambers[4],player);
         TextUI ui = new TextUI();
         ui.play(d);
 

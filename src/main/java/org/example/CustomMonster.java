@@ -1,13 +1,31 @@
 package org.example;
 
 import java.util.Random;
+//------------------------------------------------------
+// Assignment_2 (2)
+// Written by: (Anthony Alfaro 2148110)
+// For SES350 Section (602) – Spring 2025
+    /*
+        must admitI jumped into the assignment without looking at the implementation
+        this class is meant effectively be monster in the implementation and allow
+        for custom implementation if the user desires
 
+     */
+//--------------------------------------------------------
 public class CustomMonster extends Monster{
     private int strengthScore =0;
     private int craftScore;
     private int healthPoints;
     private String name = "";
     Random r = new Random();
+
+    /**
+     *
+     * @param name
+     * @param craft
+     * @param hp
+     * @param strength
+     */
     public CustomMonster(String name, int craft, int hp,int strength){
         if(craft>0){
             this.strengthScore=0;
@@ -19,29 +37,64 @@ public class CustomMonster extends Monster{
         this.name = name;
         this.healthPoints = hp;
     }
+
+    /**
+     *
+     * @return customMonster healthpoints
+     */
     public int getHealthPoints() {
         return healthPoints;
     }
 
+    /**
+     *
+     * @return customMonsters craftScore
+     */
     @Override
     public int getCraftScore() {
         return craftScore;
     }
 
+    /**
+     *
+     * @return customMonsters Strengthscore
+     */
     @Override
     public int getStrengthScore() {
         return strengthScore;
     }
 
+    /**
+     *fight compares either craft or strength score of the to
+     * @param player takes player object to fight
+     * @returns the difference between both attacks important for fight logic
+     */
     public int deductHealthPoints(Character player) {
-        int characterAttack = (r.nextInt(6)+1) + player.getCraftScore();
-        int monsterAttack = (r.nextInt(6)+1) + this.getCraftScore();
+        int characterAttack =0;
+        int monsterAttack=0;
+        if (this.craftScore > 0) {
+             characterAttack = (r.nextInt(6) + 1) + player.getCraftScore();
+             monsterAttack = (r.nextInt(6) + 1) + this.getCraftScore();
+
+        } else {
+             characterAttack = (r.nextInt(6) + 1) + player.getStrengthScore();
+             monsterAttack = (r.nextInt(6) + 1) + this.getStrengthScore();
+    }
         return characterAttack-monsterAttack;
     }
+
+    /**
+     *
+     * @param adjustedHP takes adjusted ap and decrements health by it
+     */
     public void setHealthPoints(int adjustedHP){
         this.healthPoints-=adjustedHP;
     }
 
+    /**
+     *
+     * @return monster name
+     */
     public String getName() {
         return name;
     }

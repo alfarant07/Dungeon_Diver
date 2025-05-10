@@ -3,6 +3,16 @@ package org.example;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+//------------------------------------------------------
+// Assignment_2 (2)
+// Written by: (Anthony Alfaro 2148110)
+// For SES350 Section (602) – Spring 2025
+    /*
+        Public class chamber meant to compute the Actions available to us by its list
+        allowing for each individual chamber to have its own actions and effectively functioning
+        as vertcies in a graph
+     */
+//--------------------------------------------------------
 
 public class Chamber {
     private ArrayList<Items> itemsInChamber = new ArrayList<>();
@@ -21,8 +31,8 @@ public class Chamber {
     }
 
     /**
-     *
-     * @param item
+     * Overwritten constructor
+     * @param item object added to chamber list
      */
     public Chamber(Items item) {
         itemsInChamber.add(item);
@@ -33,7 +43,7 @@ public class Chamber {
 
     /**
      *
-     * @return
+     * @return chambers list of item
      */
     public ArrayList<Items> getItems() {
         return itemsInChamber;
@@ -41,7 +51,7 @@ public class Chamber {
 
     /**
      *
-     * @param neighbor
+     * @param neighbor adds an edge to adjacent neighbor to mimic groph data structure
      */
     public void addEdge(Chamber neighbor) {
         if(neighbor!=this) {
@@ -50,17 +60,18 @@ public class Chamber {
     }
 
     /**
-     *
-     * @param monster
-     * @param destination
+     *Hashmap maps a monster to a destination and prevents access to that chamber
+     * so long as the monster is alive
+     * @param monster object guards door
+     * @param destination needed to know which door the monster is guarding
      */
     public void addMonster(Monster monster, Chamber destination) {
         this.blockedDoors.put(destination, monster);
     }
 
     /**
-     *
-     * @param destination
+     * once the monster has been killed we remove the monster from the hashmap
+     * @param destination chamber
      */
     public void removeMonster(Chamber destination){
         this.blockedDoors.remove(destination);
@@ -68,7 +79,7 @@ public class Chamber {
 
     /**
      *
-     * @return
+     * @return the adjacency list of our chamber
      */
     public ArrayList<Chamber> getDoors() {
         return adj;
@@ -76,16 +87,16 @@ public class Chamber {
 
     /**
      *
-     * @return
+     * @return the HashMap containing which chambers are blocked
      */
     public HashMap<Chamber,Monster> getBlockedDoors(){
         return blockedDoors;
     }
 
     /**
-     *
-     * @param destination
-     * @return
+     * Checks wether the destination chamber has a monster blocking it
+     * @param destination chamber
+     * @return true if blocked false if not
      */
     public boolean monsterBlockingDoor(Chamber destination){
         return this.getBlockedDoors().containsKey(destination);
@@ -93,7 +104,7 @@ public class Chamber {
 
     /**
      *
-     * @param item
+     * @param item object is removed from chambers item list
      */
     public void removeItem(Items item){
         itemsInChamber.remove(item);
@@ -101,25 +112,12 @@ public class Chamber {
 
     /**
      *
-     * @return
+     * @return name of the current chamber
      */
     public String getChamberName(){
         return this.chamberName;
     }
 
-    /**
-     *
-     * @return
-     */
-    public static int getChamberNum() {
-        return chamberNum;
-    }
 
-    /**
-     *
-     * @return
-     */
-    public ArrayList<Chamber> getAdj() {
-        return adj;
-    }
+
 }

@@ -6,6 +6,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//------------------------------------------------------
+// Assignment_2 (2)
+// Written by: (Anthony Alfaro 2148110)
+// For SES350 Section (602) – Spring 2025
+    /*
+        Test made to see the construction of our chambers and if they work properly
+
+     */
+//--------------------------------------------------------
 class ChamberTest {
     public static Chamber[] chambers;
     @BeforeEach

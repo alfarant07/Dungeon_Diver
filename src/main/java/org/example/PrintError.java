@@ -1,10 +1,24 @@
 package org.example;
 
 import java.io.IOException;
+//------------------------------------------------------
+// Assignment_2 (2)
+// Written by: (Anthony Alfaro 2148110)
+// For SES350 Section (602) – Spring 2025
+    /*
+        A class meant to print the error message should one occur
 
+     */
+//--------------------------------------------------------
 public class PrintError extends Action {
     private Dungeon d;
     private IOException e;
+
+    /**
+     * Creates a print error object with dungeon and IOException objects
+     * @param d
+     * @param e
+     */
     public PrintError(Dungeon d, IOException e) {
         super("An Error has occured");
         this.d =d;
@@ -12,6 +26,9 @@ public class PrintError extends Action {
     }
 
     @Override
+    /**
+     * prints the error message
+     */
     public void execute() {
         System.out.println("Error: " + e.getMessage());
 
