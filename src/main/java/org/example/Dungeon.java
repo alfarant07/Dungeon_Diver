@@ -27,8 +27,9 @@ public class Dungeon {
         this.currentChamber = destination;
     }
     public ArrayList<Action> getActions(){
+        actionsAvailable.clear();
         for(Items items:currentChamber.getItems() ){
-            Action item = new Pick(player,items);
+            Action item = new Pick(player,items,currentChamber);
             actionsAvailable.add(item);
         }
         for(Chamber chamber:currentChamber.getDoors() ){
