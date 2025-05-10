@@ -42,10 +42,17 @@ public class Chamber {
     public ArrayList<Chamber> getDoors() {
         return adj;
     }
-    public HashMap<Monster,Chamber> getBlockedDoors(){
+    public HashMap<Chamber,Monster> getBlockedDoors(){
         return blockedDoors;
     }
+
     public boolean monsterBlockingDoor(Chamber destination){
-        return this.getBlockedDoors().containsValue(destination);
+        return this.getBlockedDoors().containsKey(destination);
+    }
+    public void removeItem(Items item){
+        itemsInChamber.remove(item);
+    }
+    public String getChamberName(){
+        return this.chamberName;
     }
 }
