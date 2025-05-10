@@ -7,13 +7,20 @@ public class Chamber {
     private ArrayList<Items> itemsInChamber = new ArrayList<>();
     private int numDoors;
     private ArrayList<Chamber> adj = new ArrayList<>();
-    private HashMap<Monster, Chamber> blockedDoors = new HashMap<>();
+    private HashMap<Chamber, Monster> blockedDoors = new HashMap<>();
+    private static int chamberNum;
+    private String chamberName;
 
     public Chamber() {
+        chamberNum++;
+        chamberName = "Chamber " + chamberNum;
     }
 
     public Chamber(Items item) {
         itemsInChamber.add(item);
+        chamberNum++;
+        chamberName = "Chamber:" + chamberNum;
+
     }
 
     public ArrayList<Items> getItems() {
