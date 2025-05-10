@@ -1,6 +1,9 @@
 package org.example;
 
 public abstract class Monster {
+        public Monster(){
+        }
+
         public abstract int getCraftScore();
         public abstract int getStrengthScore();
         public abstract int getHealthPoints();
