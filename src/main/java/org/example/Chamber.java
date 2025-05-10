@@ -28,11 +28,12 @@ public class Chamber {
     }
 
     public void addEdge(Chamber neighbor) {
-        this.adj.add(neighbor);
+        if(neighbor!=this) {
+            this.adj.add(neighbor);
+        }
     }
-
     public void addMonster(Monster monster, Chamber destination) {
-        this.blockedDoors.put(monster, destination);
+        this.blockedDoors.put(destination, monster);
     }
     public void removeMonster(Chamber destination){
         this.blockedDoors.remove(destination);
