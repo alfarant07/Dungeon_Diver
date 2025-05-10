@@ -10,14 +10,14 @@ public class CustomMonster extends Monster{
     Random r = new Random();
     public CustomMonster(String name, int craft, int hp,int strength){
         if(craft>0){
-            strengthScore=0;
+            this.strengthScore=0;
+            this.craftScore=craft;
         }else if(strength>0){
-            craft=0;
+            this.craftScore=0;
+            this.strengthScore=strength;
         }
         this.name = name;
-        this.craftScore = craft;
         this.healthPoints = hp;
-        this.strengthScore =strength;
     }
     public int getHealthPoints() {
         return healthPoints;
