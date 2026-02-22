@@ -1,8 +1,6 @@
 package org.example;
 //------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
+
     /*
         A subclass of Character pretty much a preset role of character with hard coded values
         and cant be custom

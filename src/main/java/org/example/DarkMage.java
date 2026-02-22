@@ -1,17 +1,7 @@
 package org.example;
 
 import java.util.Random;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        A dedicated subclass of monster one of the classes made before reading the implementation
-        sets random stats of this monster for more of a fun factor and its getters and setters
-        are essential for game logic
 
-     */
-//--------------------------------------------------------
 public class DarkMage extends Monster{
     private int strengthScore =0;
     private int craftScore;

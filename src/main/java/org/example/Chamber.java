@@ -3,16 +3,6 @@ package org.example;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        Public class chamber meant to compute the Actions available to us by its list
-        allowing for each individual chamber to have its own actions and effectively functioning
-        as vertcies in a graph
-     */
-//--------------------------------------------------------
 
 public class Chamber {
     private ArrayList<Items> itemsInChamber = new ArrayList<>();

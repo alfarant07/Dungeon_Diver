@@ -1,10 +1,7 @@
 package org.example;
 
 import java.util.*;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
+
     /*
         A dungeon class which is pretty much our graph unlike the chambers which our individual
         vertices the dungeon implements a chamberEntrance to dedicate our spawn point and chamberExit

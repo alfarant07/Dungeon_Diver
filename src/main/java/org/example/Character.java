@@ -3,17 +3,7 @@ package org.example;
 import java.util.ArrayList;
 
 
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        Public class character forms the foundation of our player
-        can be customed or implemented by its has an inventory arrayList
-        to store the items our character may stumble across travelling from chamber to chamber
 
-     */
-//--------------------------------------------------------
 public class Character {
     private int strengthScore;
     private int craftScore;

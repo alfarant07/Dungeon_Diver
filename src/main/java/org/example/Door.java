@@ -1,15 +1,5 @@
 package org.example;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-       A door class with static methods meant to function as our graph builder for chambers
-       connecting chambers with each other and implementing monsters if desired in the chambers
-       hashmap to block the door
 
-     */
-//--------------------------------------------------------
 public class Door {
     /**
      *Connects two chambers by adding them in each others adjacency list

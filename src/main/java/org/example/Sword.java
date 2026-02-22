@@ -1,8 +1,6 @@
 package org.example;
 //------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
+
     /*
         A implementation of items this implementation of Item increases
         our players attack damage and this is computed off of its rarity

@@ -2,9 +2,7 @@ package org.example;
 
 import java.util.Random;
 //------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
+
     /*
         A subclass of Monster again made this before reading implementation sadly
         but Spider is a craft based monster and is able to fight our player

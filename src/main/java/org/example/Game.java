@@ -1,13 +1,5 @@
 package org.example;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        given game file
 
-     */
-//--------------------------------------------------------
 public class Game {
     public static void main(String[]args){
         Chamber[] chambers = new Chamber[]{

@@ -1,8 +1,5 @@
 package org.example;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
+
     /*
         Another subclass of action pick allows us to create Action objects
         while having its own concrete implementation of picking up items

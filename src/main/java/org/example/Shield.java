@@ -1,8 +1,6 @@
 package org.example;
 //------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
+
     /*
         A subclass of items which increments our players HP since never implemented AC
         the default constructor sets the item to common and should rarity be passed

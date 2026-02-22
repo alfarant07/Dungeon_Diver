@@ -1,17 +1,7 @@
 package org.example;
 
 import java.util.Random;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        must admitI jumped into the assignment without looking at the implementation
-        this class is meant effectively be monster in the implementation and allow
-        for custom implementation if the user desires
 
-     */
-//--------------------------------------------------------
 public class CustomMonster extends Monster{
     private int strengthScore =0;
     private int craftScore;

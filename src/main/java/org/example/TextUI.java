@@ -6,14 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 import java.util.function.BiConsumer;
 //------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-       given TextUI file
 
-     */
-//--------------------------------------------------------
 public class TextUI {
     public void play(Dungeon d){
         while(!d.isFinished()){
