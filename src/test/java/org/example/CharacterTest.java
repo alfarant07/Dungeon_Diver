@@ -3,17 +3,7 @@ package org.example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        Test made to see the construction of our character objects
-        and also to ensure they get their respective modifiers when
-        they get an item
 
-     */
-//--------------------------------------------------------
 class CharacterTest {
 
     @org.junit.jupiter.api.Test

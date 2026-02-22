@@ -5,15 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//------------------------------------------------------
-// Assignment_2 (2)
-// Written by: (Anthony Alfaro 2148110)
-// For SES350 Section (602) – Spring 2025
-    /*
-        A custom monster class used to see if custom monsters can indeed be added
 
-     */
-//--------------------------------------------------------
 class CustomMonsterTest {
     private Monster monster;
     private Monster tarrasque;
