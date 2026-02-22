@@ -1,15 +1,28 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Character {
     private int strengthScore;
     private int craftScore;
     private int healthPoints;
+<<<<<<< HEAD
     private String playerName;
     public Character(int craftScore, int strengthScore, int healthPoints,String playerName){
         this.craftScore=0;
         this.healthPoints=0;
         this.strengthScore=0;
         this.playerName =playerName;
+=======
+    private int armorScore;
+    private ArrayList<Items> inventory = new ArrayList<>();
+    Role role;
+    public Character(Role role){
+        this.role=role;
+        this.craftScore=role.getCraftScore();
+        this.healthPoints=role.getHealthPoints();
+        this.strengthScore= role.getStrengthScore();
+>>>>>>> 532fc85 (Implemented inventory and armor score field.)
     }
 
 
